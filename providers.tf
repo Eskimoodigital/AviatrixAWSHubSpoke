@@ -5,3 +5,8 @@ provider "aviatrix" {
   password                = "Ccie16661!"
   
 }
+
+provider "aws" {
+    region = "eu-central-1"
+}
+
