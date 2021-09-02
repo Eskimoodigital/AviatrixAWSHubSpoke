@@ -30,8 +30,6 @@ module "spoke_aws" {
   account         = "Eskimoo"
   transit_gw      = "avx-avffhub-transit"
   vpc_subnet_size = "24"
-  
-  
 
   ha_gw = "false"
   instance_size = "t2.micro"
