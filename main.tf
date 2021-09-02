@@ -25,7 +25,7 @@ module "spoke_aws" {
   count = 2
 
   name            = "avffsp${count.index}"
-  cidr            = ["10.77.16.0/20","10.77.32.0/20"]
+  cidr            = var.spoke_cidrs[count.index]
   region          = "eu-central-1"
   account         = "Eskimoo"
   transit_gw      = "avx-avffhub-transit"
