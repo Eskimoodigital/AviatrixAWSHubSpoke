@@ -2,11 +2,8 @@
 provider "aviatrix" {
   controller_ip           = "35.162.98.189"
   username                = "admin"
-  password                = "Ccie16661!"
+  password                = local.ctlr_creds
   
 }
 
-provider "aws" {
-    region = "eu-central-1"
-}
 
