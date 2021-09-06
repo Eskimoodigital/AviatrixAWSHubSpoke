@@ -4,13 +4,16 @@ variable "spoke_cidrs" {
     default = ["10.77.16.0/20", "10.77.32.0/20"]
 }
 
-
-data "aws_secretsmanager_secret_version" "creds" {
-  secret_id = "Aviatrix_Controller_Password"
+variable "ctrl_password" {
+    type = string
 }
 
-locals {
-  ctlr_creds = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
+# data "aws_secretsmanager_secret_version" "creds" {
+#   secret_id = "Aviatrix_Controller_Password"
+# }
+
+# locals {
+#   ctlr_creds = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
   
-}
+# }
 
