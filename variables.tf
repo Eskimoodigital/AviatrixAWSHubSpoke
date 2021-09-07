@@ -8,12 +8,3 @@ variable "ctrl_password" {
     type = string
 }
 
-# data "aws_secretsmanager_secret_version" "creds" {
-#   secret_id = "Aviatrix_Controller_Password"
-# }
-
-# locals {
-#   ctlr_creds = jsondecode(data.aws_secretsmanager_secret_version.creds.secret_string)
-  
-# }
-
