@@ -14,13 +14,15 @@ module "transit_aws_1" {
   name = "avffhub"
   ha_gw = "false"
   instance_size = "t2.micro"
+
+  
 }
 
 # Build the AWS Spokes
 
 module "spoke_aws" {
   source  = "Eskimoodigital/aws-spoke-ec2/aviatrix"
-  version = "1.0.12"
+  version = "1.0.14"
 
   count = 2
 
@@ -33,6 +35,8 @@ module "spoke_aws" {
 
   ha_gw = "false"
   instance_size = "t2.micro"
+
+  ec2_key = "KP_AVI_EC2_SPOKE"
 }
 
 
